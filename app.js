@@ -32,9 +32,12 @@ function saveTask() {
    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-const getTodos=JSON.parse(localStorage.getItem('tasks')) || [];
-getTodos.forEach(task=> createTask(task, addTask))
-console.log(getTodos);
+const storedTasks = localStorage.getItem('tasks');
+
+if (storedTasks) {
+    const getTodos = JSON.parse(storedTasks);
+    getTodos.forEach(task => createTask(task, addTask));
+}
 
 btns[0].onclick=()=>{
     if (input.value.trim()) {
