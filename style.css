@@ -1,0 +1,96 @@
+* {
+	padding: 0;
+	margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.todo-block {
+    background-color: rgba(3, 8, 67, 0.951);
+    width: 100%;
+}
+
+.todo-searchbar {
+    background-color: rgba(3, 8, 67, 0.951);
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.todo-searchbar button {
+    padding: 3px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(3, 8, 67, 0.951);
+    color: white;
+    transition: 0.4s;
+}
+
+.todo-searchbar button:hover {
+    background-color: rgba(0, 255, 0, 0.884);
+    color: red;
+    box-shadow: 0 0 5px rgba(0, 255, 162, 0.884),
+                0 0 20px rgb(0 255 162 / 0.8),
+                0 0 35px rgb(0 255 162 / 0.7),
+                0 0 50px rgba(0, 255, 76, 0.6);
+    border-color: #fff;
+}
+
+.todo-searchbar input{
+    width: 80px;
+    border-radius: 5px;
+    margin-left: 18px;
+}
+
+.ul-list-block {
+    background-color: rgba(3, 8, 67, 0.951);
+    color: white;
+    opacity: 1;
+    list-style: none;
+    padding-top: 20px;
+}
+
+.list {
+    width: 100%;
+}
+
+.list li {
+    font-weight: 600;
+}
+
+.btn{
+    padding: 5px;
+}
+
+#trash{
+    padding: 2px;
+}
+
+.list span{
+    text-align: center;
+}
+
+/* Media query for smaller screens, adjust as needed */
+@media (max-width: 768px) {
+    .todo-searchbar {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center align text in search bar */
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .delete {
+        margin: 10px 0;
+    }
+}
